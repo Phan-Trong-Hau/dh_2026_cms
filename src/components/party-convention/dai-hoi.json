@@ -1,0 +1,40 @@
+{
+  "collectionName": "components_party_convention_dai_hois",
+  "info": {
+    "displayName": "Đại hội"
+  },
+  "options": {},
+  "attributes": {
+    "ten_dai_hoi": {
+      "type": "string"
+    },
+    "nhiem_ky": {
+      "type": "string"
+    },
+    "anh_dai_hoi": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "mo_ta_ngan": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      }
+    },
+    "mo_ta_chi_tiet": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      }
+    }
+  },
+  "config": {}
+}

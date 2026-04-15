@@ -430,6 +430,139 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiHomeHome extends Struct.SingleTypeSchema {
+  collectionName: 'homes';
+  info: {
+    displayName: 'Trang ch\u1EE7';
+    pluralName: 'homes';
+    singularName: 'home';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    banner: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::home.home'> &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiLeadershipPageLeadershipPage
+  extends Struct.SingleTypeSchema {
+  collectionName: 'leadership_pages';
+  info: {
+    displayName: 'Ban l\u00E3nh \u0111\u1EA1o';
+    pluralName: 'leadership-pages';
+    singularName: 'leadership-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    anh_nen: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    anh_nen_chi_tiet: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    danh_sach_lanh_dao: Schema.Attribute.Component<
+      'leadership.thong-tin-lanh-dao',
+      true
+    >;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::leadership-page.leadership-page'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    tieu_de: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiOperationalResultPageOperationalResultPage
+  extends Struct.SingleTypeSchema {
+  collectionName: 'operational_result_pages';
+  info: {
+    displayName: 'K\u1EBFt qu\u1EA3 ho\u1EA1t \u0111\u1ED9ng';
+    pluralName: 'operational-result-pages';
+    singularName: 'operational-result-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    anh_nen: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    danh_sach_hoat_dong: Schema.Attribute.Component<'activity.hoat-dong', true>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::operational-result-page.operational-result-page'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    tieu_de: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiPartyConventionPagePartyConventionPage
+  extends Struct.SingleTypeSchema {
+  collectionName: 'party_convention_pages';
+  info: {
+    displayName: 'C\u00E1c k\u00EC \u0111\u1EA1i h\u1ED9i';
+    pluralName: 'party-convention-pages';
+    singularName: 'party-convention-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    anh_nen: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    anh_nen_chi_tiet: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    danh_sach_dai_hoi: Schema.Attribute.Component<
+      'party-convention.dai-hoi',
+      true
+    >;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::party-convention-page.party-convention-page'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    tieu_de: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface PluginContentReleasesRelease
   extends Struct.CollectionTypeSchema {
   collectionName: 'strapi_releases';
@@ -941,6 +1074,10 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
+      'api::home.home': ApiHomeHome;
+      'api::leadership-page.leadership-page': ApiLeadershipPageLeadershipPage;
+      'api::operational-result-page.operational-result-page': ApiOperationalResultPageOperationalResultPage;
+      'api::party-convention-page.party-convention-page': ApiPartyConventionPagePartyConventionPage;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;

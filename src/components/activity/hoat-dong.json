@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_activity_hoat_dongs",
+  "info": {
+    "displayName": "Hoạt động"
+  },
+  "options": {},
+  "attributes": {
+    "anh_hoat_dong": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "mo_ta": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      }
+    }
+  },
+  "config": {}
+}

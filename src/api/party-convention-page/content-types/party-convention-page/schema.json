@@ -1,0 +1,43 @@
+{
+  "kind": "singleType",
+  "collectionName": "party_convention_pages",
+  "info": {
+    "singularName": "party-convention-page",
+    "pluralName": "party-convention-pages",
+    "displayName": "Các kì đại hội"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "tieu_de": {
+      "type": "string"
+    },
+    "danh_sach_dai_hoi": {
+      "type": "component",
+      "component": "party-convention.dai-hoi",
+      "repeatable": true
+    },
+    "anh_nen": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "anh_nen_chi_tiet": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "kind": "singleType",
+  "collectionName": "operational_result_pages",
+  "info": {
+    "singularName": "operational-result-page",
+    "pluralName": "operational-result-pages",
+    "displayName": "Kết quả hoạt động"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "tieu_de": {
+      "type": "string"
+    },
+    "danh_sach_hoat_dong": {
+      "type": "component",
+      "component": "activity.hoat-dong",
+      "repeatable": true
+    },
+    "anh_nen": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}

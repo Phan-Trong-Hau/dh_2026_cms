@@ -1,0 +1,43 @@
+{
+  "kind": "singleType",
+  "collectionName": "leadership_pages",
+  "info": {
+    "singularName": "leadership-page",
+    "pluralName": "leadership-pages",
+    "displayName": "Ban lãnh đạo"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "tieu_de": {
+      "type": "string"
+    },
+    "danh_sach_lanh_dao": {
+      "type": "component",
+      "component": "leadership.thong-tin-lanh-dao",
+      "repeatable": true
+    },
+    "anh_nen": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "anh_nen_chi_tiet": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}

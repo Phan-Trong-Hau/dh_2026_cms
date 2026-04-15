@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_leadership_thong_tin_lanh_daos",
+  "info": {
+    "displayName": "Thông tin lãnh đạo"
+  },
+  "options": {},
+  "attributes": {
+    "ten": {
+      "type": "string"
+    },
+    "tuoi": {
+      "type": "string"
+    },
+    "anh_chan_dung": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "mo_ta": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      }
+    }
+  },
+  "config": {}
+}
