@@ -18,6 +18,7 @@ const config = ({ env }: Core.Config.Shared.ConfigParams): Core.Config.Plugin =>
           },
         },
       },
+      sizeLimit: 100 * 1024 * 1024, // 100MB
       actionOptions: {
         upload: {},
         uploadStream: {},
