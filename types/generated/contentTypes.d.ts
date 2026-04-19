@@ -441,13 +441,17 @@ export interface ApiHomeHome extends Struct.SingleTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-    banner: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios',
-      true
+    anh_nen: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    anh_nen_slide: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
     >;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    danh_sach_slide: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::home.home'> &
       Schema.Attribute.Private;
@@ -518,6 +522,7 @@ export interface ApiOperationalResultPageOperationalResultPage
       'api::operational-result-page.operational-result-page'
     > &
       Schema.Attribute.Private;
+    nhiem_ky: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     tieu_de: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;

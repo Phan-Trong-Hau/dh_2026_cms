@@ -49,6 +49,7 @@ export interface PartyConventionDaiHoi extends Struct.ComponentSchema {
     anh_dai_hoi: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios'
     >;
+    lan_thu: Schema.Attribute.String;
     mo_ta_chi_tiet: Schema.Attribute.RichText &
       Schema.Attribute.CustomField<
         'plugin::ckeditor5.CKEditor',

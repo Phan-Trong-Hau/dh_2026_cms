@@ -37,7 +37,8 @@ const config = ({ env }: Core.Config.Shared.ConfigParams): Core.Config.Middlewar
       origin: [
         'http://localhost:3000',
         'http://localhost:8080',
-      ],
+        env('FRONTEND_URL', ''),
+      ].filter(Boolean),
     },
   },
   'strapi::poweredBy',

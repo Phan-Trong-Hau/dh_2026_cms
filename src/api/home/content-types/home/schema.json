@@ -11,7 +11,27 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "banner": {
+    "anh_nen": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "anh_nen_slide": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "danh_sach_slide": {
       "type": "media",
       "multiple": true,
       "allowedTypes": [
