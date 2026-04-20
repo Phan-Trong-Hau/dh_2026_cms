@@ -11,9 +11,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "tieu_de": {
-      "type": "string"
-    },
     "danh_sach_dai_hoi": {
       "type": "component",
       "component": "party-convention.dai-hoi",

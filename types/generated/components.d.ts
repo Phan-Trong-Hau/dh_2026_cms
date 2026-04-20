@@ -6,16 +6,12 @@ export interface ActivityHoatDong extends Struct.ComponentSchema {
     displayName: 'Ho\u1EA1t \u0111\u1ED9ng';
   };
   attributes: {
+    anh_chi_tiet: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
     anh_hoat_dong: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios'
     >;
-    mo_ta: Schema.Attribute.RichText &
-      Schema.Attribute.CustomField<
-        'plugin::ckeditor5.CKEditor',
-        {
-          preset: 'defaultHtml';
-        }
-      >;
   };
 }
 
@@ -28,15 +24,9 @@ export interface LeadershipThongTinLanhDao extends Struct.ComponentSchema {
     anh_chan_dung: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios'
     >;
-    mo_ta: Schema.Attribute.RichText &
-      Schema.Attribute.CustomField<
-        'plugin::ckeditor5.CKEditor',
-        {
-          preset: 'defaultHtml';
-        }
-      >;
-    ten: Schema.Attribute.String;
-    tuoi: Schema.Attribute.String;
+    anh_chi_tiet: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
   };
 }
 
@@ -46,26 +36,19 @@ export interface PartyConventionDaiHoi extends Struct.ComponentSchema {
     displayName: '\u0110\u1EA1i h\u1ED9i';
   };
   attributes: {
+    anh_chi_tiet: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
     anh_dai_hoi: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios'
     >;
-    lan_thu: Schema.Attribute.String;
-    mo_ta_chi_tiet: Schema.Attribute.RichText &
+    mo_ta: Schema.Attribute.RichText &
       Schema.Attribute.CustomField<
         'plugin::ckeditor5.CKEditor',
         {
           preset: 'defaultHtml';
         }
       >;
-    mo_ta_ngan: Schema.Attribute.RichText &
-      Schema.Attribute.CustomField<
-        'plugin::ckeditor5.CKEditor',
-        {
-          preset: 'defaultHtml';
-        }
-      >;
-    nhiem_ky: Schema.Attribute.String;
-    ten_dai_hoi: Schema.Attribute.String;
   };
 }
 

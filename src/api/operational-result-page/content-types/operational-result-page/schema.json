@@ -11,12 +11,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "tieu_de": {
-      "type": "string"
-    },
-    "nhiem_ky": {
-      "type": "string"
-    },
     "danh_sach_hoat_dong": {
       "type": "component",
       "component": "activity.hoat-dong",

@@ -5,15 +5,6 @@
   },
   "options": {},
   "attributes": {
-    "ten_dai_hoi": {
-      "type": "string"
-    },
-    "lan_thu": {
-      "type": "string"
-    },
-    "nhiem_ky": {
-      "type": "string"
-    },
     "anh_dai_hoi": {
       "type": "media",
       "multiple": false,
@@ -24,14 +15,17 @@
         "audios"
       ]
     },
-    "mo_ta_ngan": {
-      "type": "customField",
-      "customField": "plugin::ckeditor5.CKEditor",
-      "options": {
-        "preset": "defaultHtml"
-      }
+    "anh_chi_tiet": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
     },
-    "mo_ta_chi_tiet": {
+    "mo_ta": {
       "type": "customField",
       "customField": "plugin::ckeditor5.CKEditor",
       "options": {

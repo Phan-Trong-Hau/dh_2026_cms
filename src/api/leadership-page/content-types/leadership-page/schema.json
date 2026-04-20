@@ -11,9 +11,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "tieu_de": {
-      "type": "string"
-    },
     "danh_sach_lanh_dao": {
       "type": "component",
       "component": "leadership.thong-tin-lanh-dao",

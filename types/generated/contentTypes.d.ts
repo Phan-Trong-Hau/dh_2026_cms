@@ -492,7 +492,6 @@ export interface ApiLeadershipPageLeadershipPage
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
-    tieu_de: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -522,9 +521,7 @@ export interface ApiOperationalResultPageOperationalResultPage
       'api::operational-result-page.operational-result-page'
     > &
       Schema.Attribute.Private;
-    nhiem_ky: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
-    tieu_de: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -561,7 +558,6 @@ export interface ApiPartyConventionPagePartyConventionPage
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
-    tieu_de: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
