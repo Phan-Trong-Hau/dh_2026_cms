@@ -64,6 +64,7 @@ export interface PartyConventionDaiHoi extends Struct.ComponentSchema {
           preset: 'defaultHtml';
         }
       >;
+    mo_ta_anh: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     thong_tin_chi_tiet: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios'
     >;
