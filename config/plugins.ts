@@ -32,7 +32,7 @@ const config = ({ env }: Core.Config.Shared.ConfigParams): Core.Config.Plugin =>
     },
   },
   'webp-converter': {
-    enabled: true,
+    enabled: false,
     config: {
       // mimeTypes that converts to WebP. Default is ['image/png', 'image/jpeg', 'image/jpg']
       mimeTypes: undefined,
