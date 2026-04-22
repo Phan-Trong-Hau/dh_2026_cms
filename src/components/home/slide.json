@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_home_slide_s",
+  "info": {
+    "displayName": "Slide "
+  },
+  "options": {},
+  "attributes": {
+    "link": {
+      "type": "string"
+    },
+    "anh": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  },
+  "config": {}
+}

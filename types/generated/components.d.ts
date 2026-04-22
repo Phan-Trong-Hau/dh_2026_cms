@@ -12,6 +12,20 @@ export interface ActivityHoatDong extends Struct.ComponentSchema {
     anh_hoat_dong: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios'
     >;
+    trang_chi_tiet: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+  };
+}
+
+export interface HomeSlide extends Struct.ComponentSchema {
+  collectionName: 'components_home_slide_s';
+  info: {
+    displayName: 'Slide ';
+  };
+  attributes: {
+    anh: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    link: Schema.Attribute.String;
   };
 }
 
@@ -42,6 +56,7 @@ export interface PartyConventionDaiHoi extends Struct.ComponentSchema {
     anh_dai_hoi: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios'
     >;
+    link: Schema.Attribute.String;
     mo_ta: Schema.Attribute.RichText &
       Schema.Attribute.CustomField<
         'plugin::ckeditor5.CKEditor',
@@ -49,6 +64,9 @@ export interface PartyConventionDaiHoi extends Struct.ComponentSchema {
           preset: 'defaultHtml';
         }
       >;
+    thong_tin_chi_tiet: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
   };
 }
 
@@ -56,6 +74,7 @@ declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'activity.hoat-dong': ActivityHoatDong;
+      'home.slide': HomeSlide;
       'leadership.thong-tin-lanh-dao': LeadershipThongTinLanhDao;
       'party-convention.dai-hoi': PartyConventionDaiHoi;
     }

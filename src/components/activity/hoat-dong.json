@@ -24,6 +24,16 @@
         "videos",
         "audios"
       ]
+    },
+    "trang_chi_tiet": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
     }
   },
   "config": {}

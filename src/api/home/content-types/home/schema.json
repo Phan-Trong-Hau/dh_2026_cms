@@ -31,15 +31,10 @@
         "audios"
       ]
     },
-    "danh_sach_slide": {
-      "type": "media",
-      "multiple": true,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
+    "danh_sach_trang": {
+      "type": "component",
+      "component": "home.slide",
+      "repeatable": true
     }
   }
 }

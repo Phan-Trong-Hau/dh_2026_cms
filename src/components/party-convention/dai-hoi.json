@@ -31,6 +31,19 @@
       "options": {
         "preset": "defaultHtml"
       }
+    },
+    "thong_tin_chi_tiet": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "link": {
+      "type": "string"
     }
   },
   "config": {}
