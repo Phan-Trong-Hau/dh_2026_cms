@@ -1,10 +1,10 @@
 {
   "kind": "singleType",
-  "collectionName": "homes",
+  "collectionName": "homepage_v2s",
   "info": {
-    "singularName": "home",
-    "pluralName": "homes",
-    "displayName": "Bức tưởng lịch sử"
+    "singularName": "homepage-v2",
+    "pluralName": "homepage-v2s",
+    "displayName": "Trang chủ"
   },
   "options": {
     "draftAndPublish": true
@@ -21,17 +21,7 @@
         "audios"
       ]
     },
-    "anh_nen_slide": {
-      "type": "media",
-      "multiple": false,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
-    },
-    "danh_sach_trang": {
+    "danh_sach_link": {
       "type": "component",
       "component": "home.slide",
       "repeatable": true

@@ -1,15 +1,9 @@
 {
-  "kind": "singleType",
-  "collectionName": "homes",
+  "collectionName": "components_digital_platform_nen_tang_so",
   "info": {
-    "singularName": "home",
-    "pluralName": "homes",
-    "displayName": "Bức tưởng lịch sử"
+    "displayName": "Nền tảng số"
   },
-  "options": {
-    "draftAndPublish": true
-  },
-  "pluginOptions": {},
+  "options": {},
   "attributes": {
     "anh_nen": {
       "type": "media",
@@ -21,7 +15,7 @@
         "audios"
       ]
     },
-    "anh_nen_slide": {
+    "anh_chi_tiet": {
       "type": "media",
       "multiple": false,
       "allowedTypes": [
@@ -31,10 +25,18 @@
         "audios"
       ]
     },
-    "danh_sach_trang": {
-      "type": "component",
-      "component": "home.slide",
-      "repeatable": true
+    "ten": {
+      "type": "string"
+    },
+    "link": {
+      "type": "string"
+    },
+    "link_video": {
+      "type": "string"
+    },
+    "path": {
+      "type": "string"
     }
-  }
+  },
+  "config": {}
 }

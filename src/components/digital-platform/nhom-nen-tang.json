@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_digital_platform_nhom_nen_tangs",
+  "info": {
+    "displayName": "Nhóm nền tảng"
+  },
+  "options": {},
+  "attributes": {
+    "ten_nhom": {
+      "type": "string"
+    },
+    "anh": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "danh_sach_nen_tang": {
+      "type": "component",
+      "component": "digital-platform.nen-tang-so",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

@@ -430,10 +430,50 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiDigitalPlatformPageDigitalPlatformPage
+  extends Struct.SingleTypeSchema {
+  collectionName: 'digital_platform_pages';
+  info: {
+    displayName: 'N\u1EC1n t\u1EA3ng s\u1ED1 ti\u00EAu bi\u1EC3u';
+    pluralName: 'digital-platform-pages';
+    singularName: 'digital-platform-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    anh_nen: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    anh_nen_chi_tiet: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    danh_sach_nhom_nen_trang: Schema.Attribute.Component<
+      'digital-platform.nhom-nen-tang',
+      true
+    >;
+    icon_chi_tiet: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::digital-platform-page.digital-platform-page'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiHomeHome extends Struct.SingleTypeSchema {
   collectionName: 'homes';
   info: {
-    displayName: 'Trang ch\u1EE7';
+    displayName: 'B\u1EE9c t\u01B0\u1EDFng l\u1ECBch s\u1EED';
     pluralName: 'homes';
     singularName: 'home';
   };
@@ -451,6 +491,35 @@ export interface ApiHomeHome extends Struct.SingleTypeSchema {
     danh_sach_trang: Schema.Attribute.Component<'home.slide', true>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::home.home'> &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiHomepageV2HomepageV2 extends Struct.SingleTypeSchema {
+  collectionName: 'homepage_v2s';
+  info: {
+    displayName: 'Trang ch\u1EE7';
+    pluralName: 'homepage-v2s';
+    singularName: 'homepage-v2';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    anh_nen: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    danh_sach_link: Schema.Attribute.Component<'home.slide', true>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::homepage-v2.homepage-v2'
+    > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
@@ -1072,7 +1141,9 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
+      'api::digital-platform-page.digital-platform-page': ApiDigitalPlatformPageDigitalPlatformPage;
       'api::home.home': ApiHomeHome;
+      'api::homepage-v2.homepage-v2': ApiHomepageV2HomepageV2;
       'api::leadership-page.leadership-page': ApiLeadershipPageLeadershipPage;
       'api::operational-result-page.operational-result-page': ApiOperationalResultPageOperationalResultPage;
       'api::party-convention-page.party-convention-page': ApiPartyConventionPagePartyConventionPage;

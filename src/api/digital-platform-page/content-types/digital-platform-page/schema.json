@@ -1,10 +1,10 @@
 {
   "kind": "singleType",
-  "collectionName": "homes",
+  "collectionName": "digital_platform_pages",
   "info": {
-    "singularName": "home",
-    "pluralName": "homes",
-    "displayName": "Bức tưởng lịch sử"
+    "singularName": "digital-platform-page",
+    "pluralName": "digital-platform-pages",
+    "displayName": "Nền tảng số tiêu biểu"
   },
   "options": {
     "draftAndPublish": true
@@ -21,7 +21,7 @@
         "audios"
       ]
     },
-    "anh_nen_slide": {
+    "anh_nen_chi_tiet": {
       "type": "media",
       "multiple": false,
       "allowedTypes": [
@@ -31,10 +31,20 @@
         "audios"
       ]
     },
-    "danh_sach_trang": {
+    "danh_sach_nhom_nen_trang": {
       "type": "component",
-      "component": "home.slide",
+      "component": "digital-platform.nhom-nen-tang",
       "repeatable": true
+    },
+    "icon_chi_tiet": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
     }
   }
 }

@@ -18,6 +18,38 @@ export interface ActivityHoatDong extends Struct.ComponentSchema {
   };
 }
 
+export interface DigitalPlatformNenTangSo extends Struct.ComponentSchema {
+  collectionName: 'components_digital_platform_nen_tang_so';
+  info: {
+    displayName: 'N\u1EC1n t\u1EA3ng s\u1ED1';
+  };
+  attributes: {
+    anh_chi_tiet: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    anh_nen: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    link: Schema.Attribute.String;
+    link_video: Schema.Attribute.String;
+    path: Schema.Attribute.String;
+    ten: Schema.Attribute.String;
+  };
+}
+
+export interface DigitalPlatformNhomNenTang extends Struct.ComponentSchema {
+  collectionName: 'components_digital_platform_nhom_nen_tangs';
+  info: {
+    displayName: 'Nh\u00F3m n\u1EC1n t\u1EA3ng';
+  };
+  attributes: {
+    anh: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    danh_sach_nen_tang: Schema.Attribute.Component<
+      'digital-platform.nen-tang-so',
+      true
+    >;
+    ten_nhom: Schema.Attribute.String;
+  };
+}
+
 export interface HomeSlide extends Struct.ComponentSchema {
   collectionName: 'components_home_slide_s';
   info: {
@@ -75,6 +107,8 @@ declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'activity.hoat-dong': ActivityHoatDong;
+      'digital-platform.nen-tang-so': DigitalPlatformNenTangSo;
+      'digital-platform.nhom-nen-tang': DigitalPlatformNhomNenTang;
       'home.slide': HomeSlide;
       'leadership.thong-tin-lanh-dao': LeadershipThongTinLanhDao;
       'party-convention.dai-hoi': PartyConventionDaiHoi;
