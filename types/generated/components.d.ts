@@ -12,6 +12,10 @@ export interface ActivityHoatDong extends Struct.ComponentSchema {
     anh_hoat_dong: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios'
     >;
+    danh_sach_anh_chi_tiet: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
     trang_chi_tiet: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios'
     >;
